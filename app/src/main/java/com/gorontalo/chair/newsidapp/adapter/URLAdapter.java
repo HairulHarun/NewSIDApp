@@ -14,8 +14,8 @@ public class URLAdapter {
         return URL_WEB = URL_WEB+"index.php";
     }
 
-    public String getAndroidProfile(){
-        return URL_WEB = URL_ANDROID+"profile.php";
+    public String getAndroidProfile(String nik){
+        return URL_WEB = URL_ANDROID+"profile.php?nik="+nik;
     }
 
     public String getAndroidRequest(){
