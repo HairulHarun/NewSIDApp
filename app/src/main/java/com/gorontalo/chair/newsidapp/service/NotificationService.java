@@ -1,11 +1,14 @@
 package com.gorontalo.chair.newsidapp.service;
 
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.util.Log;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
@@ -17,6 +20,7 @@ import com.gorontalo.chair.newsidapp.adapter.SessionAdapter;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
@@ -37,6 +41,7 @@ public class NotificationService extends FirebaseMessagingService {
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     private void sendPushNotification(JSONObject json) {
         //optionally we can display the json into log
         Log.e(TAG, "Notification JSON " + json.toString());
@@ -46,8 +51,8 @@ public class NotificationService extends FirebaseMessagingService {
 
             //parsing json data
             String isi_notif = data.getString("isi_notif");
-
-            showNotification("INFO DESA", isi_notif);
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            showNotification(getApplicationContext(), "INFO DESA", isi_notif, intent);
 
         } catch (JSONException e) {
             Log.e(TAG, "Json Exception: " + e.getMessage());
@@ -56,21 +61,34 @@ public class NotificationService extends FirebaseMessagingService {
         }
     }
 
-    public void showNotification(String title, String message) {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+    public void showNotification(Context context, String title, String body, Intent intent) {
+        NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID)
+        int notificationId = 1;
+        String channelId = "channel-01";
+        String channelName = "Channel Name";
+        int importance = NotificationManager.IMPORTANCE_HIGH;
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            NotificationChannel mChannel = new NotificationChannel(
+                    channelId, channelName, importance);
+            notificationManager.createNotificationChannel(mChannel);
+        }
+
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context, channelId)
                 .setSmallIcon(R.mipmap.ic_launcher)
-                .setContentTitle("My notification")
-                .setContentText("Hello World!")
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                // Set the intent that will fire when the user taps the notification
-                .setContentIntent(pendingIntent)
-                .setAutoCancel(true);
+                .setContentTitle(title)
+                .setContentText(body);
 
-        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
-        notificationManager.notify(123, builder.build());
+        TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
+        stackBuilder.addNextIntent(intent);
+        PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(
+                0,
+                PendingIntent.FLAG_UPDATE_CURRENT
+        );
+        mBuilder.setContentIntent(resultPendingIntent);
+
+        notificationManager.notify(notificationId, mBuilder.build());
     }
 }

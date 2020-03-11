@@ -19,12 +19,14 @@ import androidx.lifecycle.ViewModelProviders;
 import com.gorontalo.chair.newsidapp.R;
 import com.gorontalo.chair.newsidapp.adapter.BrowserAdapter;
 import com.gorontalo.chair.newsidapp.adapter.KoneksiAdapter;
+import com.gorontalo.chair.newsidapp.adapter.SessionAdapter;
 import com.gorontalo.chair.newsidapp.adapter.URLAdapter;
 import com.gorontalo.chair.newsidapp.adapter.WebInterfaceAdapter;
 import com.gorontalo.chair.newsidapp.ui.dashboard.DashboardFragment;
 
 public class NotificationsFragment extends Fragment {
     private KoneksiAdapter koneksiAdapter;
+    private SessionAdapter sessionAdapter;
     private WebView webView;
     private ProgressBar progress;
     private Boolean isInternetPresent = false;
@@ -51,6 +53,7 @@ public class NotificationsFragment extends Fragment {
         progress.setVisibility(View.GONE);
         webView = (WebView) view.findViewById(R.id.webView);
 
+        sessionAdapter = new SessionAdapter(getActivity().getApplicationContext());
         koneksiAdapter = new KoneksiAdapter(getActivity().getApplicationContext());
         if (isInternetPresent = koneksiAdapter.isConnectingToInternet()) {
             loadWeb();
@@ -69,6 +72,6 @@ public class NotificationsFragment extends Fragment {
         webView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
         webView.addJavascriptInterface(new WebInterfaceAdapter(getActivity()), "Android");
         webView.setWebViewClient(new BrowserAdapter(getActivity().getApplicationContext(), progress));
-        webView.loadUrl(new URLAdapter().getAndroidProfile());
+        webView.loadUrl(new URLAdapter().getAndroidProfile(sessionAdapter.getKTP()));
     }
 }
