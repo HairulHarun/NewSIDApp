@@ -1,0 +1,207 @@
+{
+  "project_info": {
+    "project_number": "814395928659",
+    "firebase_url": "https://andoird-201000.firebaseio.com",
+    "project_id": "andoird-201000",
+    "storage_bucket": "andoird-201000.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814395928659:android:04c8858b252ddd5f",
+        "android_client_info": {
+          "package_name": "com.example.gorontalo.kurir_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814395928659-v4hh75a904u0lliqelcuorfvs79scovp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gorontalo.kurir_app",
+            "certificate_hash": "81a56b8c15b842e0e9bf74fc1b9bf35f5809e077"
+          }
+        },
+        {
+          "client_id": "814395928659-fc45qc6l9o3h6nbts97uet6o3d0ce3ra.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gorontalo.kurir_app",
+            "certificate_hash": "811b86ed351188b9a9c938b42aeb5b5aa08fb0ae"
+          }
+        },
+        {
+          "client_id": "814395928659-20comlh5ep1kdaukf5htrvsh0rre8gah.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gorontalo.kurir_app",
+            "certificate_hash": "f9d1037afa80c86ff14335c81f22f113210a9d2c"
+          }
+        },
+        {
+          "client_id": "814395928659-pdjk5gm4cvsm6va9h4bocek4gug6656q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvsanIqVQeUp2v3U6jgUIQx-k6OD6VhuU"
+        },
+        {
+          "current_key": "AIzaSyBkoVuH_dqfFyDgYuJmnKLiM0XSJpFo5w4"
+        },
+        {
+          "current_key": "AIzaSyAXkFNoo5k41tBNvqiyY-sBvgMmKI70SqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814395928659-pdjk5gm4cvsm6va9h4bocek4gug6656q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814395928659:android:6d64e48c76653c5a0d16a6",
+        "android_client_info": {
+          "package_name": "com.example.gpstracking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814395928659-lea6rnfiok3tgjm1tc4cib8534hmpdm1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gpstracking",
+            "certificate_hash": "c744dfbb1f95dc8c83aaca2c0e936b7e4865c654"
+          }
+        },
+        {
+          "client_id": "814395928659-pdjk5gm4cvsm6va9h4bocek4gug6656q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvsanIqVQeUp2v3U6jgUIQx-k6OD6VhuU"
+        },
+        {
+          "current_key": "AIzaSyBkoVuH_dqfFyDgYuJmnKLiM0XSJpFo5w4"
+        },
+        {
+          "current_key": "AIzaSyAXkFNoo5k41tBNvqiyY-sBvgMmKI70SqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814395928659-pdjk5gm4cvsm6va9h4bocek4gug6656q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814395928659:android:9ee152631167f3a90d16a6",
+        "android_client_info": {
+          "package_name": "com.gorontalo.chair.newsidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814395928659-og0c1lrruh9vbuha9qfgfb6v7ejph4a7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gorontalo.chair.newsidapp",
+            "certificate_hash": "81a56b8c15b842e0e9bf74fc1b9bf35f5809e077"
+          }
+        },
+        {
+          "client_id": "814395928659-pdjk5gm4cvsm6va9h4bocek4gug6656q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvsanIqVQeUp2v3U6jgUIQx-k6OD6VhuU"
+        },
+        {
+          "current_key": "AIzaSyBkoVuH_dqfFyDgYuJmnKLiM0XSJpFo5w4"
+        },
+        {
+          "current_key": "AIzaSyAXkFNoo5k41tBNvqiyY-sBvgMmKI70SqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814395928659-pdjk5gm4cvsm6va9h4bocek4gug6656q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814395928659:android:b51f00183fc3416b",
+        "android_client_info": {
+          "package_name": "com.gorontalo.chair.pelangganapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814395928659-sffk9cms3fu0b2ou4a65fhmeernhah1o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gorontalo.chair.pelangganapp",
+            "certificate_hash": "81a56b8c15b842e0e9bf74fc1b9bf35f5809e077"
+          }
+        },
+        {
+          "client_id": "814395928659-v9jaskvgoh8pkfk25vr849un7s84s4go.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gorontalo.chair.pelangganapp",
+            "certificate_hash": "811b86ed351188b9a9c938b42aeb5b5aa08fb0ae"
+          }
+        },
+        {
+          "client_id": "814395928659-pdjk5gm4cvsm6va9h4bocek4gug6656q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvsanIqVQeUp2v3U6jgUIQx-k6OD6VhuU"
+        },
+        {
+          "current_key": "AIzaSyBkoVuH_dqfFyDgYuJmnKLiM0XSJpFo5w4"
+        },
+        {
+          "current_key": "AIzaSyAXkFNoo5k41tBNvqiyY-sBvgMmKI70SqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814395928659-pdjk5gm4cvsm6va9h4bocek4gug6656q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
