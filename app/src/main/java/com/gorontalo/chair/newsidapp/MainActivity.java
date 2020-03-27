@@ -27,4 +27,8 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
     }
 
+    public void onBackPressed(){
+        moveTaskToBack(true);
+    }
+
 }
