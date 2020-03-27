@@ -1,10 +1,10 @@
 package com.gorontalo.chair.newsidapp.adapter;
 
 public class URLAdapter {
-    private String URL = "https://hairulharun.000webhostapp.com/webservices/";
-    private String URL_PHOTO = "https://hairulharun.000webhostapp.com/admin-control/assets/images/photo/";
-    private String URL_WEB = "https://hairulharun.000webhostapp.com/";
-    private String URL_ANDROID = "https://hairulharun.000webhostapp.com/android/";
+    private String URL = "https://sid-sidomulyo.com/webservices/";
+    private String URL_PHOTO = "https://sid-sidomulyo.com/admin-control/assets/images/photo/";
+    private String URL_WEB = "https://sid-sidomulyo.com/";
+    private String URL_ANDROID = "https://sid-sidomulyo.com/android/";
 
     public String getLogin(){
         return URL = URL+"ws-get-login.php";
