@@ -7,6 +7,7 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.gorontalo.chair.newsidapp.adapter.SessionAdapter;
+import com.gorontalo.chair.newsidapp.service.NotificationSound;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -16,6 +17,7 @@ import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
     private SessionAdapter sessionAdapter;
+    Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
 
         sessionAdapter = new SessionAdapter(getApplicationContext());
         sessionAdapter.checkLoginMain();
+
+        i = new Intent(this, NotificationSound.class);
+        stopService(i);
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -50,6 +55,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        stopService(i);
     }
 
     public void onBackPressed(){
